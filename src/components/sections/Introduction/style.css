@@ -1,0 +1,37 @@
+.introduction-section {
+  padding: 40px;
+  height: 100vh;
+  background-image: url('https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials.jpg');
+  background-size: cover;
+  color: #ffedd6;
+}
+
+.introduction-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.introduction-text-block {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+  z-index: 1;
+}
+
+.introduction-heading {
+  width: 50%;
+  font-weight: bold;
+  font-size: 72px;
+  margin-left: auto;
+}
+
+.introduction-subheading {
+  font-size: 24px;
+}

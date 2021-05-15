@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ScrollLayout from './components/ScrollLayout';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ScrollLayout>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ScrollLayout>
   </React.StrictMode>,
   document.getElementById('root')
 );

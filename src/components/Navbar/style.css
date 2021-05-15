@@ -1,0 +1,16 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  transition: 0.3s;
+  z-index: 100;
+}
+
+.navbar-scrolled {
+  background: #ccbba5;
+  transition: 0.3s;
+}
