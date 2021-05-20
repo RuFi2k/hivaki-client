@@ -1,10 +1,12 @@
-import { Introduction, Navbar } from "../components";
+import { FindUs, Footer, Introduction, Navbar, Social } from "../components";
 
 const Home: React.FC = () => {
   return <div>
     <Navbar />
     <Introduction />
-    <div style={{ height: '500vh'}}></div>
+    <FindUs />
+    <Social />
+    <Footer />
   </div>
 }
 

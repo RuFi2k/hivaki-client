@@ -1,0 +1,44 @@
+.findus-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: calc(100vw - 200px);
+  margin: 100px 0;
+}
+
+.findus-path {
+  height: 600px;
+  width: 400px;
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.findus-container {
+  background: #ffc900;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px 30px;
+  flex: 1;
+  height: 300px;
+}
+
+.findus-heading {
+  font-size: 36px;
+  border-bottom: 3px solid #FFF;
+  display: inline-block;
+}
+
+.findus-text {
+  padding-top: 20px;
+}
+
+.findus-phone {
+  text-decoration: none;
+  color: #FFF;
+}

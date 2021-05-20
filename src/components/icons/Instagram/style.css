@@ -1,0 +1,30 @@
+.instagram-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.instagram-container:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.instagram-icon {
+  font-size: 48px;
+  color: #FFF;
+  background: linear-gradient(45deg, #fada00, #ef0f22, #7c36ac);
+  background: -webkit-linear-gradient(45deg, #fada00, #ef0f22, #7c36ac);
+  margin-right: 12px;
+  border-radius: 12px;
+  min-width: 48px;
+  padding: 3px;
+}
+
+.instagram-text {
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+}

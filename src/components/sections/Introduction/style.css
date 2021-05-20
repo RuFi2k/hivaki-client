@@ -21,7 +21,7 @@
   position: sticky;
   top: 50%;
   transform: translateY(-50%);
-  text-align: right;
+  text-align: center;
   z-index: 1;
 }
 
@@ -30,6 +30,7 @@
   font-weight: bold;
   font-size: 72px;
   margin-left: auto;
+  margin-right: auto;
 }
 
 .introduction-subheading {

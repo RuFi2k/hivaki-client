@@ -1,0 +1,208 @@
+@-webkit-keyframes shadow-end {
+  0%   {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 62.53362300000008, 416.86814793999997);
+  }
+  100% {
+    opacity: 0;
+    transform: matrix(2, 0, 0, 2, 62.53362300000008, 416.86814793999997);
+  }
+}
+@-moz-keyframes shadow-end {
+  0%   {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 62.53362300000008, 416.86814793999997);
+  }
+  100% {
+    opacity: 0;
+    transform: matrix(2, 0, 0, 2, 62.53362300000008, 416.86814793999997);
+  }
+}
+@-o-keyframes shadow-end {
+  0%   {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 62.53362300000008, 416.86814793999997);
+  }
+  100% {
+    opacity: 0;
+    transform: matrix(2, 0, 0, 2, 62.53362300000008, 416.86814793999997);
+  }
+}
+@keyframes shadow-end {
+  0%   {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 62.53362300000008, 416.86814793999997);
+  }
+  100% {
+    opacity: 0;
+    transform: matrix(2, 0, 0, 2, 62.53362300000008, 416.86814793999997);
+  }
+}
+
+.shadow-end {
+  -webkit-animation: shadow-end 1s ease-in-out infinite; /* Safari 4+ */
+  -moz-animation:    shadow-end 1s ease-in-out infinite; /* Fx 5+ */
+  -o-animation:      shadow-end 1s ease-in-out infinite; /* Opera 12+ */
+  animation:         shadow-end 1s ease-in-out infinite; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes shadow-start {
+  0%   {
+    opacity: 0;
+    transform: matrix(2, 0, 0, 2, 62.53362300000008, 416.86814793999997);
+  }
+  100% {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 62.53362300000008, 416.86814793999997);
+  }
+}
+@-moz-keyframes shadow-start {
+  0%   {
+    opacity: 0;
+    transform: matrix(2, 0, 0, 2, 62.53362300000008, 416.86814793999997);
+  }
+  100% {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 62.53362300000008, 416.86814793999997);
+  }
+}
+@-o-keyframes shadow-start {
+  0%   {
+    opacity: 0;
+    transform: matrix(2, 0, 0, 2, 62.53362300000008, 416.86814793999997);
+  }
+  100% {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 62.53362300000008, 416.86814793999997);
+  }
+}
+@keyframes shadow-start {
+  0%   {
+    opacity: 0;
+    transform: matrix(2, 0, 0, 2, 62.53362300000008, 416.86814793999997);
+  }
+  100% {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 62.53362300000008, 416.86814793999997);
+  }
+}
+
+.shadow-start {
+  -webkit-animation: shadow-start 1s ease-in-out infinite; /* Safari 4+ */
+  -moz-animation:    shadow-start 1s ease-in-out infinite; /* Fx 5+ */
+  -o-animation:      shadow-start 1s ease-in-out infinite; /* Opera 12+ */
+  animation:         shadow-start 1s ease-in-out infinite; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes pin-end {
+  0%   {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, 216.73121797334343, -268.34049521941068);
+  }
+  50% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, 216.73121797334343, -288.34049521941068);
+  }
+  100% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, 216.73121797334343, -268.34049521941068);
+  }
+}
+@-moz-keyframes pin-end {
+  0%   {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, 216.73121797334343, -268.34049521941068);
+  }
+  50% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, 216.73121797334343, -288.34049521941068);
+  }
+  100% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, 216.73121797334343, -268.34049521941068);
+  }
+}
+@-o-keyframes pin-end {
+  0%   {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, 216.73121797334343, -268.34049521941068);
+  }
+  50% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, 216.73121797334343, -288.34049521941068);
+  }
+  100% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, 216.73121797334343, -268.34049521941068);
+  }
+}
+@keyframes pin-end {
+  0%   {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, 216.73121797334343, -268.34049521941068);
+  }
+  50% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, 216.73121797334343, -288.34049521941068);
+  }
+  100% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, 216.73121797334343, -268.34049521941068);
+  }
+}
+
+.pin-end {
+  -webkit-animation: pin-end 3s ease-in-out infinite; /* Safari 4+ */
+  -moz-animation:    pin-end 3s ease-in-out infinite; /* Fx 5+ */
+  -o-animation:      pin-end 3s ease-in-out infinite; /* Opera 12+ */
+  animation:         pin-end 3s ease-in-out infinite; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes pin-start {
+  0%   {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, -0.59046703165662, 39.03128324058929);
+  }
+  50% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, -0.59046703165662, 19.03128324058929);
+  }
+  100% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, -0.59046703165662, 39.03128324058929);
+  }
+}
+@-moz-keyframes pin-start {
+  0%   {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, -0.59046703165662, 39.03128324058929);
+  }
+  50% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, -0.59046703165662, 19.03128324058929);
+  }
+  100% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, -0.59046703165662, 39.03128324058929);
+  }
+}
+@-o-keyframes pin-start {
+  0%   {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, -0.59046703165662, 39.03128324058929);
+  }
+  50% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, -0.59046703165662, 19.03128324058929);
+  }
+  100% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, -0.59046703165662, 39.03128324058929);
+  }
+}
+@keyframes pin-start {
+  0%   {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, -0.59046703165662, 39.03128324058929);
+  }
+  50% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, -0.59046703165662, 19.03128324058929);
+  }
+  100% {
+    transform: matrix(1.04724711364723, 0, 0, 1.05388196295737, -0.59046703165662, 39.03128324058929);
+  }
+}
+
+.pin-start {
+  -webkit-animation: pin-start 3s ease-in-out infinite; /* Safari 4+ */
+  -moz-animation:    pin-start 3s ease-in-out infinite; /* Fx 5+ */
+  -o-animation:      pin-start 3s ease-in-out infinite; /* Opera 12+ */
+  animation:         pin-start 3s ease-in-out infinite; /* IE 10+, Fx 29+ */
+}
+
+#eSvCENkwT4O6, #eSvCENkwT4O10 {
+  z-index: 1;
+}
+
+#eSvCENkwT4O1 {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,32 @@
+.social-container {
+  padding: 24px 0;
+  /* background: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm31-aom-003-wood_2.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=2102be08ebf63ba8441b6ab72f7f3863'); */
+}
+
+.social-section {
+  background-color: #fff;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 24px 36px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(119,119,119,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(119,119,119,1);
+  box-shadow: 0px 0px 8px 0px rgba(119,119,119,1);
+}
+
+.social-heading {
+  font-size: 40px;
+  border-bottom: 3px solid #000;
+  display: inline-block;
+}
+
+.social-text {
+  font-size: 24px;
+  padding: 12px 0;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}

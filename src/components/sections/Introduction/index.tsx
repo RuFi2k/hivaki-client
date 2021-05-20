@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Introduction: React.FC = () => {
+const Section: React.FC = () => {
   return <section className='introduction-section'>
     <div className='introduction-text-block'>
       <h1 className='introduction-heading'>Ваша красота - наша забота</h1>
@@ -10,4 +10,4 @@ const Introduction: React.FC = () => {
   </section>
 }
 
-export default Introduction;
+export default Section;
