@@ -1,0 +1,84 @@
+.card-container-wrapper {
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(196,196,196,1);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(196,196,196,1);
+  box-shadow: 0px 0px 10px 4px rgba(196,196,196,1);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.card-container {
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(196,196,196,1);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(196,196,196,1);
+  box-shadow: 0px 0px 10px 4px rgba(196,196,196,1);
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  align-items: center;
+  text-align: center;
+  padding: 20px 10px;
+  border-radius: 12px;
+  position: relative;
+  height: 300px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-description {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px) contrast(0.9);
+  border-radius: 12px;
+  opacity: 0;
+}
+
+.card-container:hover .card-description {
+  opacity: 1;
+  bottom: 2px;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  transition: 0.3s;
+}
+
+.card-container:hover .card-title {
+  transition: 0.3s;
+  transform: scale(1.1);
+  border-bottom: 2px solid #000;
+}
+
+.card-container:hover {
+  transform: scale(1.02) translateY(-10px);
+  background: linear-gradient(45deg, #7933c2, #40e0f9);
+  -webkit-box-shadow: 0px 4px 10px 7px rgba(196,196,196,1);
+  -moz-box-shadow: 0px 4px 10px 7px rgba(196,196,196,1);
+  box-shadow: 0px 4px 10px 7px rgba(196,196,196,1);
+  transition: 0.3s;
+}
+
+.card-container:hover .card-icon {
+  color: #fff;
+  transition: 0.3s;
+}
+
+.card-title {
+  display: inline-block;
+  z-index: 2;
+}
+
+.card-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 96px;
+  color: #000;
+  transition: 0.3s;
+}

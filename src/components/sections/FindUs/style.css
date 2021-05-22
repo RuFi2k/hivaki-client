@@ -23,19 +23,20 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 20px 30px;
+  padding: 20px 240px;
   flex: 1;
   height: 300px;
 }
 
 .findus-heading {
-  font-size: 36px;
+  font-size: 48px;
   border-bottom: 3px solid #FFF;
   display: inline-block;
 }
 
 .findus-text {
   padding-top: 20px;
+  font-size: 20px;
 }
 
 .findus-phone {

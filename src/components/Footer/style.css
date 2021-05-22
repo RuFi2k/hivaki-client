@@ -1,0 +1,51 @@
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #272727;
+  color: #dadada;
+  align-items: center;
+}
+
+.footer-main {
+  padding: 40px 0;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-copy {
+  text-align: center;
+  padding: 12px 0;
+  color: #454545;
+}
+
+.footer-phone {
+  color: #dadada;
+}
+
+.footer-row {
+  line-height: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #dadada;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.footer-link:hover {
+  border-bottom: 1px solid #dadada;
+  transition: 0.3s;
+}
+
+.footer-git {
+  color: #454545;
+}
+
+.footer-logo {
+  font-size: 16px;
+}

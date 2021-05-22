@@ -10,9 +10,9 @@ const Section: React.FC = () => {
         Следите за новостями в соцсетях Там можно найти много интересной и полезной информации 😀
       </p>
       <div className='social-list'>
-        {socials.map(({ link, icon }) => {
+        {socials.map(({ link, icon }, i) => {
           const Icon = icon;
-          return <Icon to={link}/>
+          return <Icon key={i} to={link}/>
         })}
       </div>
     </div>

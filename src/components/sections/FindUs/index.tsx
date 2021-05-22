@@ -9,7 +9,8 @@ const Section: React.FC = () => {
       <h2 className='findus-heading'>Где найти</h2>
       <p className="findus-text">
         г. Нижний Новгород<br/>
-        р-н Сормово<br />
+        Сормовский р-н<br />
+        ул. Белозерская, 3<br />
         <a className='findus-phone' href='tel:79535728118'>+7 (953)-572-81-18</a><br />
       </p>
     </div>

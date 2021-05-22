@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import './style.css';
+import { Logo } from '..';
 
-const Navbar: React.FC = () => {
+const Component: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   useEffect(() => {
@@ -11,7 +12,11 @@ const Navbar: React.FC = () => {
     })
   }, []);
 
-  return <nav className={clsx('navbar', scrolled && 'navbar-scrolled')}>navbar</nav>
+  return <nav className={clsx('navbar', scrolled && 'navbar-scrolled')}>
+    <div className="navbar-logo">
+      <Logo />
+    </div>
+  </nav>
 }
 
-export default Navbar;
+export default Component;
