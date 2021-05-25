@@ -48,4 +48,6 @@
 
 .footer-logo {
   font-size: 16px;
+  text-decoration: none;
+  color: inherit;
 }

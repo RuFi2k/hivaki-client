@@ -5,11 +5,12 @@ import socials from '../sections/Social/list';
 import './style.css';
 
 const Footer: React.FC = () => {
+  const year = new Date().getFullYear();
   return <footer className='footer-section'>
     <div className="footer-main">
-      <div className="footer-logo">
+      <Link to='/' className="footer-logo">
         <Logo />
-      </div>
+      </Link>
       <div className="footer-row">
         <Link to='booking' className='footer-link'>Запись</Link>
         <a href='#' className='footer-link'>Администрирование</a>
@@ -25,7 +26,7 @@ const Footer: React.FC = () => {
       </div>
     </div>
     <div className="footer-copy">
-      &copy; Website made by <a className='footer-git' target="__blank" href='https://github.com/RuFi2k'>RuFi</a>. All right reserved. 2021
+      &copy; Website made by <a className='footer-git' target="__blank" href='https://github.com/RuFi2k'>RuFi</a>. {year}
     </div>
   </footer>
 }

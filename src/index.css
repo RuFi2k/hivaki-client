@@ -3,8 +3,11 @@ body {
   font-family: 'Seymour One', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
   background-attachment: fixed;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -32,3 +35,13 @@ body {
 /*
 font-family: 'Seymour One', sans-serif;
 */
+
+.anchor {
+  visibility: collapse;
+  position: absolute;
+  top: -100px;
+}
+
+section {
+  position: relative;
+}

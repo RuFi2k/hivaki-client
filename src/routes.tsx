@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { Redirect, Route, Switch } from "react-router";
+import { Loader } from './components';
 import { IRoute } from "./types/router";
 
 const routes: IRoute[] = [
@@ -16,7 +17,7 @@ const routes: IRoute[] = [
 ];
 
 const renderRoutes = () => (
-  <Suspense fallback={'loading'}>
+  <Suspense fallback={<Loader />}>
     <Switch>
       {routes.map((route, i) => (
         <Route

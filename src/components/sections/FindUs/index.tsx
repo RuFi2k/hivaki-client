@@ -4,6 +4,7 @@ import './style.css';
 
 const Section: React.FC = () => {
   return <section className='findus-section'>
+    <span className='anchor findus-anchor' id='findus'>anchor</span>
     <PathIcon className='findus-path' />
     <div className='findus-container'>
       <h2 className='findus-heading'>Где найти</h2>

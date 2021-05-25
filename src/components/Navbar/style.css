@@ -5,17 +5,81 @@
   width: 100vw;
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 10px 40px;
   transition: 0.3s;
   z-index: 100;
+  color: #fff;
 }
 
 .navbar-scrolled {
-  background: #ccbba5;
+  background: #fefefe;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(196,196,196,1);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(196,196,196,1);
+  box-shadow: 0px 2px 5px 0px rgba(196,196,196,1);
   transition: 0.3s;
-  color: #fff;
+  color: #0a0a0a;
 }
 
 .navbar-logo {
   font-size: 12px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar-navigation {
+  display: flex;
+  list-style-type: none;
+  margin-left: auto;
+  padding-left: 0;
+}
+
+.navbar-navigation>li {
+  margin-left: 40px;
+}
+
+.navbar-navigation>li:first-child {
+  margin-left: 0;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  padding: 4px 0;
+}
+.navbar-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.navbar-link:hover::before {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.navbar-scrolled .navbar-link::before,
+.navbar-scrolled .navbar-link::after {
+  background-color: #000;
 }
