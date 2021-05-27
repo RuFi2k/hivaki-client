@@ -1,0 +1,84 @@
+.servicecard-container {
+  padding: 20px;
+  background: #ffc900;
+  box-shadow: 0px 0px 5px 5px #d0d0d0;
+  position: relative;
+  margin-bottom: 10px;
+  min-height: 300px;
+  width: 700px;
+  margin-top: 40px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.servicecard-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.servicecard-container:last-child {
+  margin-bottom: 0;
+}
+
+.servicecard-icon {
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 60%;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.servicecard-container:last-child .servicecard-icon {
+  padding: 50px;
+}
+
+.servicecard-icon>svg {
+  height: 100%;
+  fill: #ffc900;
+}
+
+.servicecard-item-title {
+  padding: 8px 0;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.servicecard-item {
+  border-top: 1px solid #c4c4c4;
+}
+
+.servicecard-item:last-child {
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.servicecard-item-title:hover {
+  font-weight: bold;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+.servicecard-item-title:hover ~ .servicecard-text {
+  visibility: visible;
+  transition: 0.3s
+}
+
+.servicecard-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 60%;
+  right: 0;
+  padding: 20px;
+  visibility: hidden;
+  backdrop-filter: blur(2px);
+}
+
+.servicecard-container svg {
+  transition: 0.3s;
+}

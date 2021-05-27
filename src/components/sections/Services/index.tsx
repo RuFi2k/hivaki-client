@@ -1,4 +1,5 @@
 import React from 'react';
+import { ServiceCard } from '../..';
 import services from './services';
 import './style.css';
 
@@ -11,7 +12,7 @@ const Section: React.FC = () => {
       Вот что умею на даный момент
     </p>
     <div className="services-list">
-      {services.map(s => <p>{s.title}</p>)}
+      {services.map((s, id) => <ServiceCard key={id} {...s} />)}
     </div>
   </section>
 }

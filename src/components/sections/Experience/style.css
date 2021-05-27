@@ -1,0 +1,43 @@
+.experience-section {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+}
+
+.experience-icon svg {
+  position: absolute;
+}
+
+.experience-icon {
+  display: flex;
+  justify-content: center;
+  transform: scale(0.5) translateY(-100px);
+  height: 256px;
+}
+
+.experience-icon svg:first-child {
+  transform: scale(0.5) translate(calc(-100%), 20px);
+  fill: #b46e2a;
+}
+
+.experience-icon svg:nth-child(2) {
+  z-index: 1;
+  fill: #f7b900;
+}
+
+.experience-icon svg:last-child {
+  transform: scale(0.5) translate(calc(100%), 20px);
+  fill: #c7c7c7;
+}
+
+.experience-heading {
+  font-size: 48px;
+  border-bottom: 3px solid #000;
+  display: inline-block;
+}
+
+.experience-text {
+  font-size: 18px;
+  margin-top: 20px;
+}

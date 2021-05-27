@@ -1,10 +1,12 @@
-interface ICategory {
+import { Addon, Eyebrow, Eyelash } from "../../icons";
+
+export interface ICategory {
   title: string,
   services: IService[],
   icon: React.FC | null,
 }
 
-interface IService {
+export interface IService {
   title: string,
   text: string,
 }
@@ -15,26 +17,26 @@ const services: ICategory[] = [
     services: [
       {
         title: 'Ламинирование',
-        text: '',
+        text: 'qweqweqweqweqw',
       },
       {
         title: 'Ламинирование с оформлением',
-        text: '',
+        text: 'wqeqweqweqweqweqweq',
       },
       {
         title: 'Окрашивание/коррекция',
-        text: '',
+        text: 'qwererwrdcvfgdrsferyh',
       },
       {
         title: 'Окрашивание/корренция с оформлением',
-        text: '',
+        text: 'nmhgfbdfvdbgnjfgdf fhnbdfbry rg fgd fsd dhfb xfb',
       },
       {
         title: 'Счастье для бровей',
-        text: '',
+        text: ' gdfgbs ghg warrsz bdrf gbes fvds fxhbd fgcb v dfxb',
       },
     ],
-    icon: null,
+    icon: Eyebrow,
   },
   {
     title: 'Ресницы',
@@ -52,7 +54,7 @@ const services: ICategory[] = [
         text: '',
       },
     ],
-    icon: null,
+    icon: Eyelash,
   },
   {
     title: 'Дополнительно',
@@ -70,7 +72,7 @@ const services: ICategory[] = [
         text: '',
       },
     ],
-    icon: null,
+    icon: Addon,
   }
 ];
 

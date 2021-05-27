@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 
 const Section: React.FC = () => {
-  return <section className='introduction-section'>
+  return <section className='introduction-section' style={{ backgroundImage: `url('${process.env.PUBLIC_URL}/logo512.png')`}}>
     <span className='anchor' id='introduction'>anchor</span>
     <div className='introduction-text-block'>
       <h1 className='introduction-heading'>Ваша красота - наша забота</h1>
