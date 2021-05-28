@@ -80,3 +80,42 @@
   color: #000;
   transition: 0.3s;
 }
+
+@media screen and (max-width: 1279px) {
+  .card-container {
+    width: 200px;
+    height: 240px;
+  }
+
+  .card-description {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .card-container-wrapper:last-child {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-description {
+    font-size: 14px;
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .card-container-wrapper {
+    margin-bottom: 60px;
+  }
+  
+  .card-container {
+    width: 250px;
+    height: 300px;
+  }
+
+  .card-container-wrapper:last-child {
+    margin: 0;
+  }
+}

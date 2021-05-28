@@ -7,3 +7,4 @@ export { default as Logo } from './Logo';
 export { default as ScrollLayout } from './ScrollLayout';
 export { default as Loader } from './Loader';
 export { default as ServiceCard } from './ServiceCard';
+export { default as AnchorLink } from './AnchorLink';

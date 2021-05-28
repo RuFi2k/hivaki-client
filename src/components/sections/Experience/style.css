@@ -38,6 +38,46 @@
 }
 
 .experience-text {
-  font-size: 18px;
+  font-size: 24px;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 1279px) {
+  .experience-section {
+    width: 720px;
+  }
+
+  .experience-heading {
+    font-size: 36px;
+  }
+
+  .experience-text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .experience-section {
+    width: 500px;
+    height: 300px;
+  }
+
+  .experience-heading {
+    font-size: 24px;
+  }
+
+  .experience-text {
+    font-size: 14px;
+  }
+
+  .experience-icon {
+    transform: scale(0.25) translateY(-300px);
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .experience-section {
+    width: 300px;
+    padding-bottom: 10px;
+  }
 }

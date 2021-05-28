@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import './style.css';
-import { Logo } from '..';
+import { AnchorLink, Logo } from '..';
 import { Link } from 'react-router-dom';
+import { IMenu } from './menus';
 
-const Component: React.FC = () => {
+type Props = {
+  menu: IMenu[],
+}
+
+const Component: React.FC<Props> = ({ menu }) => {
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   useEffect(() => {
@@ -18,11 +23,13 @@ const Component: React.FC = () => {
       <Logo />
     </Link>
     <ul className='navbar-navigation'>
-      <li><Link className='navbar-link' to='booking'>Запись</Link></li>
-      <li><a className='navbar-link' href="#services">Услуги</a></li>
-      <li><a className='navbar-link' href="#findus">Где искать</a></li>
-      <li><a className='navbar-link' href="#qualities">Качества</a></li>
-      <li><a className='navbar-link' href="#social">Медиа</a></li>
+      {menu.map((item, id) => (
+        <li key={id}>
+          {item.anchor
+            ? <AnchorLink className='navbar-link' href={item.link}>{item.title}</AnchorLink>
+            : <Link className='navbar-link' to={item.link}>{item.title}</Link>}
+        </li>
+      ))}
     </ul>
   </nav>
 }

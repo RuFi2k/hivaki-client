@@ -46,6 +46,7 @@
   color: inherit;
   position: relative;
   padding: 4px 0;
+  font-size: 20px;
 }
 .navbar-link::before {
   content: '';
@@ -82,4 +83,32 @@
 .navbar-scrolled .navbar-link::before,
 .navbar-scrolled .navbar-link::after {
   background-color: #000;
+}
+
+@media screen and (max-width: 799px) {
+  .navbar {
+    flex-direction: column;
+    padding-top: 0;
+  }
+  
+  .navbar-navigation {
+    justify-content: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .navbar-navigation>li {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .navbar-link {
+    font-size: 16px;
+  }
+
+  .navbar-logo {
+    font-size: 8px;
+  }
 }

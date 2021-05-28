@@ -30,3 +30,41 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
+@media screen and (max-width: 1279px) {
+  .social-section {
+    width: 720px;
+  }
+
+  .social-heading {
+    font-size: 36px;
+  }
+
+  .social-text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .social-section {
+    width: 500px;
+  }
+
+  .social-heading {
+    font-size: 24px;
+  }
+
+  .social-text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .social-section {
+    width: 300px;
+  }
+
+  .social-list>* {
+    flex: 1;
+  }
+}
