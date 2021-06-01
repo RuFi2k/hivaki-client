@@ -1,9 +1,12 @@
 body {
   margin: 0;
-  font-family: 'Seymour One', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-attachment: fixed;
+}
+
+body * {
+  font-family: 'Seymour One', sans-serif !important;
 }
 
 html {

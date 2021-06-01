@@ -1,0 +1,7 @@
+.slots-section {
+  padding: 120px 40px 40px 40px;
+}
+
+.slots-list>div:last-child {
+  border-bottom: 1px solid #000;
+}

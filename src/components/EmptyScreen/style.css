@@ -1,0 +1,27 @@
+.empty-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #1c1c2e;
+  background-color: #f0f0f0;
+}
+
+.empty-icon {
+  font-size: 128px;
+}
+
+.empty-text {
+  text-align-last: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+.empty-link {
+  margin-top: 12px;
+  font-size: 20px;
+  color: #1c1c2e
+}

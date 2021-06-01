@@ -1,0 +1,35 @@
+.bookingmodal-container {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 1200px;
+}
+
+.bookingmodal-form {
+  flex: 1;
+}
+
+.bookingmodal-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  background-color: #ffc900;
+  padding: 40px 80px;
+}
+
+.bookingmodal-time {
+  font-size: 24px;
+}
+
+.bookingmodal-date {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.bookingmodal-form {
+  padding: 40px 80px;
+}

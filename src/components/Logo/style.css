@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
 
 .logo-main {
-  font-family: 'Kaushan Script', cursive;
+  font-family: 'Kaushan Script', cursive !important;
   font-size: 4em;
   position: relative;
 }

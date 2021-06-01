@@ -7,9 +7,10 @@ import { IMenu } from './menus';
 
 type Props = {
   menu: IMenu[],
+  black?: boolean,
 }
 
-const Component: React.FC<Props> = ({ menu }) => {
+const Component: React.FC<Props> = ({ menu, black }) => {
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   useEffect(() => {
@@ -18,7 +19,7 @@ const Component: React.FC<Props> = ({ menu }) => {
     })
   }, []);
 
-  return <nav className={clsx('navbar', scrolled && 'navbar-scrolled')}>
+  return <nav className={clsx('navbar', (scrolled || black) && 'navbar-scrolled')}>
     <Link to='/' className="navbar-logo">
       <Logo />
     </Link>

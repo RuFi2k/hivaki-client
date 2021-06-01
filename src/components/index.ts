@@ -8,3 +8,8 @@ export { default as ScrollLayout } from './ScrollLayout';
 export { default as Loader } from './Loader';
 export { default as ServiceCard } from './ServiceCard';
 export { default as AnchorLink } from './AnchorLink';
+export { default as FeedbackCard } from './FeedbackCard';
+export { default as SlotsContainer } from './SlotsContainer';
+export { default as EmptyScreen } from './EmptyScreen';
+export { default as SlotCard } from './SlotCard';
+export { default as BookingModal } from './BookingModal';
