@@ -5,8 +5,9 @@ import './style.css'
 type Props = {
   date: string,
   time: string,
+  id: string,
   handleClose: () => void,
-  submitSuccess: (message: string) => void,
+  submitSuccess: (message: string, id: string) => void,
   submitError: (message: string) => void,
 }
 
@@ -37,7 +38,7 @@ const useStyles = makeStyles({
   },
 })
 
-const Component: React.FC<Props> = ({ date, time, handleClose, submitSuccess, submitError }) => {
+const Component: React.FC<Props> = ({ date, time, id, handleClose, submitSuccess, submitError }) => {
   const classes = useStyles();
   const [phone, setPhone] = React.useState<ControlledInput>(DEFAULT_INPUT);
   const [name, setName] = React.useState<ControlledInput>(DEFAULT_INPUT);
@@ -47,14 +48,27 @@ const Component: React.FC<Props> = ({ date, time, handleClose, submitSuccess, su
     return !!phone.error || !!name.error;
   }, [phone, name])
 
-  const handleSubmit = () => {
+  console.log(date, time, id)
+
+  const handleSubmit = async () => {
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    try{
+      const { data } = await fetch(`${process.env.REACT_APP_API_URL}/bookings`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: name.value, phone: phone.value, timeslotid: id,
+        })
+      }).then(res => res.json());
+      submitSuccess('Запись прошла успешно.', data.id);
+    } catch(e) {
       submitError('Произошла ошибка при оформлении записи. Повторите попытку позже.');
-      // submitSuccess('Запись прошла успешно.');
+    } finally {
       handleClose();
-    }, 1500)
+      setLoading(false);
+    }
   }
 
   const validatePhone = () => {

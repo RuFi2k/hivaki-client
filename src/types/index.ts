@@ -7,8 +7,8 @@ export interface IDay {
 
 export interface ISlot {
   id: string,
-  timestart: ITime,
-  timeend: ITime,
+  start: ITime,
+  end: ITime,
 }
 
 export interface ITime {

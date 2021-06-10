@@ -21,7 +21,7 @@ const Component: React.FC<Props> = ({ slot: { day, month, year, slots }, toggleM
     <ul className="slotcard-slots">
       {slots.map((slot) => (
         <li key={slot.id} className='slots-item' onClick={() => {toggleModal({ day, month, year, slots }, slot.id)}}>
-          <p className="sloritem-time">{getTimeString(slot.timestart)}-{getTimeString(slot.timeend)}</p>
+          <p className="sloritem-time">{getTimeString(slot.start)}-{getTimeString(slot.end)}</p>
         </li>
       ))}
     </ul>

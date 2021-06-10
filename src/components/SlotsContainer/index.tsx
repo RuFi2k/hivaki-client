@@ -7,6 +7,7 @@ import './style.css'
 
 type Props = {
   slots: IDay[],
+  getSlots: () => void,
 }
 
 const useStyles = makeStyles({
@@ -20,11 +21,13 @@ const useStyles = makeStyles({
   },
 })
 
-const Component: React.FC<Props> = ({ slots }) => {
+const Component: React.FC<Props> = ({ slots, getSlots }) => {
   const classes = useStyles();
   const [modalVisible, setVisible] = React.useState<boolean>(false);
   const [day, setDay] = React.useState<string>('');
   const [time, setTime] = React.useState<string>('');
+  const [id, setId] = React.useState<string>('');
+  const [dayId, setDayId] = React.useState<string>('');
 
   const [severity, setSeverity] = React.useState<boolean>(false);
   const [message, setMessage] = React.useState<string>('');
@@ -39,7 +42,9 @@ const Component: React.FC<Props> = ({ slots }) => {
     const activeSlot = slots.find(x => x.id === id);
     if(activeSlot) {
       setDay(getDayString(day, month));
-      setTime(`${getTimeString(activeSlot.timestart)}-${getTimeString(activeSlot.timeend)}`);
+      setTime(`${getTimeString(activeSlot.start)}-${getTimeString(activeSlot.end)}`);
+      setId(id);
+      setDayId(dayId)
       setVisible(true);
     }
   }
@@ -70,10 +75,11 @@ const Component: React.FC<Props> = ({ slots }) => {
       }}
     >
       <Fade in={modalVisible}>
-        <BookingModal date={day} time={time} handleClose={() => {setVisible(false)}} submitSuccess={(message) => {
+        <BookingModal date={day} time={time} id={id} handleClose={() => {setVisible(false)}} submitSuccess={(message) => {
           setSeverity(false);
           setMessage(message);
           setOpen(true);
+          getSlots();
         }} submitError={(message) => {
           setSeverity(true);
           setMessage(message);
