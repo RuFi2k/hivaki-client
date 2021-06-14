@@ -14,6 +14,11 @@ const routes: IRoute[] = [
     exact: true,
     component: React.lazy(() => import('./pages/Booking')),
   },
+  {
+    path: '/admin',
+    exact: true,
+    component: React.lazy(() => import('./pages/Admin')),
+  },
 ];
 
 const renderRoutes = () => (

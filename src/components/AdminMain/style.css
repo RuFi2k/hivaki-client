@@ -1,0 +1,12 @@
+.admin-section {
+  padding-top: 90px;
+  display: flex;
+  height: 100vh;
+}
+
+.admin-tabcontent {
+  flex: 1;
+  padding: 12px;
+  border-left: 1px solid rgb(161, 161, 161);
+  height: 100%;
+}

@@ -48,8 +48,6 @@ const Component: React.FC<Props> = ({ date, time, id, handleClose, submitSuccess
     return !!phone.error || !!name.error;
   }, [phone, name])
 
-  console.log(date, time, id)
-
   const handleSubmit = async () => {
     setLoading(true);
     try{

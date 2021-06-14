@@ -33,10 +33,6 @@ const Component: React.FC<Props> = ({ slots, getSlots }) => {
   const [message, setMessage] = React.useState<string>('');
   const [open, setOpen] = React.useState<boolean>(false);
 
-  React.useEffect(() => {
-    console.log(open)
-  }, [open])
-
   const handleModalShow = (slot: IDay, id: string): void => {
     const { day, month, slots } = slot;
     const activeSlot = slots.find(x => x.id === id);

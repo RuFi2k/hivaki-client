@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
       </Link>
       <div className="footer-row">
         <Link to='booking' className='footer-link'>Запись</Link>
-        <a href='#' className='footer-link'>Администрирование</a>
+        <Link to='admin' className='footer-link'>Администрирование</Link>
         {socials.map((s, i) => <a className='footer-link' key={i} target='__blank' href={s.link}>{s.text}</a>)}
       </div>
       <div className="footer-row">

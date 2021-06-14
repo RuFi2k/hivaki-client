@@ -13,3 +13,5 @@ export { default as SlotsContainer } from './SlotsContainer';
 export { default as EmptyScreen } from './EmptyScreen';
 export { default as SlotCard } from './SlotCard';
 export { default as BookingModal } from './BookingModal';
+export { default as AuthForm } from './AuthForm';
+export { default as AdminMain } from './AdminMain';
