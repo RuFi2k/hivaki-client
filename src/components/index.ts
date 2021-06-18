@@ -15,3 +15,5 @@ export { default as SlotCard } from './SlotCard';
 export { default as BookingModal } from './BookingModal';
 export { default as AuthForm } from './AuthForm';
 export { default as AdminMain } from './AdminMain';
+export { default as CreateSlotsModal } from './CreateSlotsModal';
+export { default as DeleteModal } from './DeleteModal';

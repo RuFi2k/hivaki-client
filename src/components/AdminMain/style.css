@@ -2,6 +2,7 @@
   padding-top: 90px;
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
 .admin-tabcontent {

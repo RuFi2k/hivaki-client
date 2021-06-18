@@ -1,0 +1,30 @@
+.createslots-modal {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  max-height: 50%;
+  width: 600px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.createslots-main {
+  flex: 1;
+  overflow: scroll;
+  height: 1000px;
+}
+
+.createslots-btngroup {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sloterror-message {
+  font-size: 12px;
+  color: rgb(248, 63, 63)
+}

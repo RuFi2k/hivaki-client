@@ -1,0 +1,39 @@
+.adminookings-section {
+  height: 100%;
+}
+
+.badges-green {
+  padding: 5px;
+  background-color: rgb(68, 214, 68);
+  color: #fff;
+  border-radius: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.badges-grey {
+  padding: 5px;
+  background-color: rgb(83, 83, 83);
+  color: #fff;
+  border-radius: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.badges-blue {
+  padding: 5px;
+  background-color: rgb(106, 144, 248);
+  color: #fff;
+  border-radius: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.badges-red {
+  padding: 5px;
+  background-color: rgb(248, 106, 106);
+  color: #fff;
+  border-radius: 15px;
+  font-weight: bold;
+  text-align: center;
+}
