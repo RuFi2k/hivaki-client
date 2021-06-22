@@ -45,9 +45,12 @@ const Component: React.FC<Props> = ({ loading, setLoading, setUser }) => {
           password: password.value
         })
       }).then(res => {
-        if(!res.ok) {
-          throw Error('Неверное имя пользователя или пароль')
+        if(res.status === 403) {
+          localStorage.setItem('authToken', 'NO_TOKEN')
+          setUser && setUser(null)
+          throw new Error('Unauthorized')
         }
+        if(!res.ok) throw Error('Неверное имя пользователя или пароль')
         return res.json()
       })
       setUser(data.id)

@@ -20,7 +20,7 @@ const Component: React.FC<Props> = ({ slot: { day, month, year, slots }, toggleM
     <p className="slotcard-date">{getDayString(day, month)}</p>
     <ul className="slotcard-slots">
       {slots.map((slot) => (
-        <li key={slot.id} className='slots-item' onClick={() => {toggleModal({ day, month, year, slots }, slot.id)}}>
+        <li key={slot.id} className={`slots-item ${typeof slot.status !== 'undefined' ? slot.status ? 'slots-red' : 'slots-green' : ''}`} onClick={() => {toggleModal({ day, month, year, slots }, slot.id)}}>
           <p className="sloritem-time">{getTimeString(slot.start)}-{getTimeString(slot.end)}</p>
         </li>
       ))}

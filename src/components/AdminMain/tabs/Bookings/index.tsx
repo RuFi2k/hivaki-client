@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import { CircularProgress, Table, Paper, TableContainer, TableRow, TableCell, TableBody, TableHead, Button } from '@material-ui/core';
+import { CircularProgress, Table, Paper, TableContainer, TableRow, TableCell, TableBody, TableHead, Button, Snackbar } from '@material-ui/core';
 import { UserContext } from '../../../../pages/Admin';
 
 const Tab: React.FC = () => {
@@ -10,16 +10,24 @@ const Tab: React.FC = () => {
   const [limit] = React.useState<number>(20);
   const [offset, setOffset] = React.useState<number>(0);
   const [ableToLoad, setAbleToLoad] = React.useState<boolean>(true);
+  const [snackbar, toggleSnackbar] = React.useState<string>('');
+  const [error, setError] = React.useState<boolean>(false);
 
   const handleLoad = async () => {
     setLoading(true)
     try{
+      setError(false)
       const { data } = await fetch(`${process.env.REACT_APP_API_URL}/bookings?limit=${limit}&offset=${offset}`, {
         method: 'GET',
         headers: {
           'authToken': localStorage.getItem('authToken') || '',
         }
       }).then(res => {
+        if(res.status === 403) {
+          localStorage.setItem('authToken', 'NO_TOKEN')
+          setUser && setUser(null)
+          throw new Error('Unauthorized')
+        }
         setOffset(prev => prev + limit)
         return res.json()
       })
@@ -29,7 +37,8 @@ const Tab: React.FC = () => {
       
       setBookings((prev) => ([...prev, ...data]))
     } catch(e) {
-      console.log(e.message)
+      setError(true)
+      toggleSnackbar('Произошла ошибка при обработке запроса')
     } finally {
       setLoading(false)
     }
@@ -83,8 +92,10 @@ const Tab: React.FC = () => {
       })
 
       setBookings(prev => prev.map(x => x.id === data.id ? data : x))
+      toggleSnackbar('Операция успешна')
     } catch(e) {
-      console.log(e.message)
+      setError(true)
+      toggleSnackbar('Произошла ошибка при обработке запроса')
     }
   }
 
@@ -131,6 +142,9 @@ const Tab: React.FC = () => {
     </TableContainer>
     {loading ? <CircularProgress /> :
     ableToLoad && <Button variant='contained' style={{ marginTop: '12px' }} onClick={handleLoad}>Загрузить еще</Button>}
+    <Snackbar open={!!snackbar} autoHideDuration={2000} onClose={() => toggleSnackbar('')}>
+      <p className={`adminuser-snackbar ${error ? 'snackbar-error' : ''}`}>{snackbar}</p>
+    </Snackbar>
   </section>
 }
 

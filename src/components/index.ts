@@ -17,3 +17,4 @@ export { default as AuthForm } from './AuthForm';
 export { default as AdminMain } from './AdminMain';
 export { default as CreateSlotsModal } from './CreateSlotsModal';
 export { default as DeleteModal } from './DeleteModal';
+export { default as ErrorPage } from './ErrorPage';

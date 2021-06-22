@@ -1,5 +1,6 @@
 import { Button, CircularProgress, FormControl, FormHelperText, Input, InputLabel, makeStyles } from '@material-ui/core'
 import React from 'react'
+import { UserContext } from '../../pages/Admin'
 import './style.css'
 
 type Props = {
@@ -39,6 +40,7 @@ const useStyles = makeStyles({
 })
 
 const Component: React.FC<Props> = ({ date, time, id, handleClose, submitSuccess, submitError }) => {
+  const { setUser } = React.useContext(UserContext)
   const classes = useStyles();
   const [phone, setPhone] = React.useState<ControlledInput>(DEFAULT_INPUT);
   const [name, setName] = React.useState<ControlledInput>(DEFAULT_INPUT);
@@ -59,7 +61,15 @@ const Component: React.FC<Props> = ({ date, time, id, handleClose, submitSuccess
         body: JSON.stringify({
           name: name.value, phone: phone.value, timeslotid: id,
         })
-      }).then(res => res.json());
+      }).then(res => {
+        if(res.status === 403) {
+          localStorage.setItem('authToken', 'NO_TOKEN')
+          setUser && setUser(null)
+          throw new Error('Unauthorized')
+        }
+        if(!res.ok) return res.text()
+        return res.json()
+      });
       submitSuccess('Запись прошла успешно.', data.id);
     } catch(e) {
       submitError('Произошла ошибка при оформлении записи. Повторите попытку позже.');

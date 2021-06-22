@@ -51,7 +51,7 @@ const Tab: React.FC = () => {
       localStorage.setItem('authToken', data.token)
       toggleSnackbar(true)
     } catch(e) {
-      setError(e.message)
+      setError('Произошла ошибка. Повторите попытку позже')
     } finally {
       setLoading(false);
     }

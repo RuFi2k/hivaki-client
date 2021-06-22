@@ -33,3 +33,46 @@
 .bookingmodal-form {
   padding: 40px 80px;
 }
+
+@media screen and (max-width: 1279px) {
+  .bookingmodal-container {
+    width: 720px;
+  }
+
+  .bookingmodal-timer {
+    padding: 20px 40px;
+  }
+
+  .bookingmodal-form {
+    padding: 20px 40px;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .bookingmodal-container {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .bookingmodal-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .bookingmodal-form {
+    padding: 10px 20px;
+  }
+
+  .bookingmodal-timer {
+    padding: 10px 20px;
+  }
+
+  .bookingmodal-date {
+    font-size: 36px;
+  }
+
+  .bookingmodal-time {
+    font-size: 18px;
+  }
+}

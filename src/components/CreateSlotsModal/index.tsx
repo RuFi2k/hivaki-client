@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal, Backdrop, Fade, Button, FormControl, InputLabel, Select, MenuItem, IconButton } from '@material-ui/core';
 import './style.css';
+import { UserContext } from '../../pages/Admin';
 
 type Props = {
   open: boolean,
@@ -16,11 +17,13 @@ const defaultSlot = {
 }
 
 const Component: React.FC<Props> = ({ open, handleClose, handleSuccessCreate }) => {
+  const { setUser } = React.useContext(UserContext)
   const [year, setYear] = React.useState<number>(new Date().getUTCFullYear())
   const [month, setMonth] = React.useState<number>(new Date().getUTCMonth())
   const [day, setDay] = React.useState<number>(new Date().getUTCDate())
   const [slots, setSlots] = React.useState<any[]>([defaultSlot]);
   const [slotErrors, setSlotError] = React.useState<{ [k: string]: string }>({});
+  const [error, setError] = React.useState<string>('');
 
   const monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
   "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
@@ -81,6 +84,7 @@ const Component: React.FC<Props> = ({ open, handleClose, handleSuccessCreate }) 
 
   const handleSubmit = async () => {
     try{
+      setError('')
       await fetch(`${process.env.REACT_APP_API_URL}/timeslots`, {
         method: 'POST',
         headers: {
@@ -94,11 +98,16 @@ const Component: React.FC<Props> = ({ open, handleClose, handleSuccessCreate }) 
           }))
         })
       }).then(res => {
+        if(res.status === 403) {
+          localStorage.setItem('authToken', 'NO_TOKEN')
+          setUser && setUser(null)
+          throw new Error('Unauthorized')
+        }
         if(!res.ok) throw new Error('Не удалось создать. Повторите попытку позже')
         return res.json()
       }).then(() => {handleSuccessCreate()})
     } catch(e) {
-      console.log(e.message)
+      setError('Произошла ошибка при обработке запроса')
     }
   }
 
@@ -256,6 +265,7 @@ const Component: React.FC<Props> = ({ open, handleClose, handleSuccessCreate }) 
           </div>
           <div className='createslots-btngroup'>
             <Button onClick={handleSubmit} variant="contained" disabled={!slots.length || !!Object.keys(slotErrors).length}>Создать</Button>
+            <span className='authform-error'>{error}</span>
           </div>
         </div>
       </Fade>

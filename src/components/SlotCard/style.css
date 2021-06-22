@@ -9,6 +9,12 @@
 .slotcard-date {
   font-weight: bold;
   font-size: 24px;
+  align-self: flex-start;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 80px;
 }
 
 .slotcard-slots {
@@ -29,5 +35,25 @@
 .slots-item:hover {
   color: #fff;
   background-color: #000;
+  transition: 0.3s;
+}
+
+.slots-green {
+  border: 1px solid green;
+}
+
+.slots-green:hover {
+  color: #fff;
+  background-color: green;
+  transition: 0.3s;
+}
+
+.slots-red {
+  border: 1px solid red;
+}
+
+.slots-red:hover {
+  color: #fff;
+  background-color: red;
   transition: 0.3s;
 }

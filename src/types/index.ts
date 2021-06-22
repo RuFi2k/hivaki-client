@@ -9,6 +9,7 @@ export interface ISlot {
   id: string,
   start: ITime,
   end: ITime,
+  status?: boolean,
 }
 
 export interface ITime {

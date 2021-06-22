@@ -14,7 +14,6 @@ const Admin: React.FC = () => {
       localStorage.setItem('authToken', data.token);
       setUser(data.id)
     } catch(e) {
-      // console.log(e)
     } finally {
       setLoading(false)
     }

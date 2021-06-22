@@ -9,12 +9,12 @@ interface ISocial {
 
 const socials: ISocial[] = [
   {
-    link: 'https://www.instagram.com/ybnpc',
+    link: 'https://www.instagram.com/haya_brows',
     icon: InstagramIcon,
     text: 'Instagram',
   },
   {
-    link: 'https://www.vk.com/id123445',
+    link: 'https://www.vk.com/haya_brows',
     icon: VKIcon,
     text: 'Вконтакте',
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { EmptyScreen, Loader, Navbar, SlotsContainer } from '../components';
+import { EmptyScreen, Loader, Navbar, SlotsContainer, ErrorPage } from '../components';
 import { IDay } from '../types';
 
 const Booking: React.FC = () => {
@@ -30,7 +30,7 @@ const Booking: React.FC = () => {
     <Navbar black menu={[]} />
     {loading ? <Loader />
     : error 
-      ? <p>error</p>
+      ? <ErrorPage />
       : loaded
         ? <SlotsContainer slots={slots} getSlots={getSlots} />
         : <EmptyScreen />}

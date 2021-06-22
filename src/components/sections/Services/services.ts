@@ -17,23 +17,23 @@ const services: ICategory[] = [
     services: [
       {
         title: 'Ламинирование',
-        text: 'qweqweqweqweqw',
+        text: 'Длительное сохранение формы',
       },
       {
         title: 'Ламинирование с оформлением',
-        text: 'wqeqweqweqweqweqweq',
+        text: 'Качественная укладка и придание красивой? натуральной формы',
       },
       {
         title: 'Окрашивание/коррекция',
-        text: 'qwererwrdcvfgdrsferyh',
+        text: 'Придает вашим бровям контрастности и эстетики',
       },
       {
         title: 'Окрашивание/корренция с оформлением',
-        text: 'nmhgfbdfvdbgnjfgdf fhnbdfbry rg fgd fsd dhfb xfb',
+        text: 'Придает вашим бровям контрастности и эстетики',
       },
       {
         title: 'Счастье для бровей',
-        text: ' gdfgbs ghg warrsz bdrf gbes fvds fxhbd fgcb v dfxb',
+        text: '',
       },
     ],
     icon: Eyebrow,
@@ -43,15 +43,15 @@ const services: ICategory[] = [
     services: [
       {
         title: 'Ламинирование',
-        text: '',
+        text: 'Реснички будут как свои, только лучше :3',
       },
       {
         title: 'Окрашивание',
-        text: '',
+        text: 'Подчеркивает цвет ваших ресниц, придает контрастности',
       },
       {
         title: 'Снятие нарощенных ресниц',
-        text: '',
+        text: 'Сделаем все как было, скачественным уходом',
       },
     ],
     icon: Eyelash,
@@ -61,15 +61,15 @@ const services: ICategory[] = [
     services: [
       {
         title: 'Ваксинг всего лица',
-        text: '',
+        text: 'Самая есстественная красота? Так вот же она :)',
       },
       {
         title: 'Ваксинг над верхней губой',
-        text: '',
+        text: 'Самая есстественная красота? Так вот же она :)',
       },
       {
         title: 'Гель для бровей Art Visage',
-        text: '',
+        text: 'Качественный, с сильной фиксацией. Как по мне лучшее решение в соотношении цена/качество',
       },
     ],
     icon: Addon,

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Modal, Fade, Backdrop, Button } from '@material-ui/core'
 import './style.css'
+import { UserContext } from '../../pages/Admin'
 
 type Props = {
   open: boolean,
@@ -12,11 +13,14 @@ type Props = {
 }
 
 const Component: React.FC<Props> = ({ open, handleClose, handleSuccessDelete, id, start, end }) => {
+  const { setUser } = React.useContext(UserContext)
   const [disabled, setDisabled] = React.useState<boolean>(false);
+  const [error, setError] = React.useState<string>('');
 
   const handleDelete = async () => {
     setDisabled(true);
     try{
+      setError('')
       await fetch(`${process.env.REACT_APP_API_URL}/timeslots/${id}`, {
         method: 'DELETE',
         headers: {
@@ -24,6 +28,11 @@ const Component: React.FC<Props> = ({ open, handleClose, handleSuccessDelete, id
           'authToken': localStorage.getItem('authToken') || '',
         }
       }).then(res => {
+        if(res.status === 403) {
+          localStorage.setItem('authToken', 'NO_TOKEN')
+          setUser && setUser(null)
+          throw new Error('Unauthorized')
+        }
         if(!res.ok) throw new Error('Error')
         return res.json()
       }).then(() => {
@@ -31,7 +40,7 @@ const Component: React.FC<Props> = ({ open, handleClose, handleSuccessDelete, id
         handleClose()
       })
     } catch(e) {
-      console.log(e.message)
+      setError('Произошла ошибка при обработке запроса')
     } finally {
       setDisabled(false);
     }
@@ -59,6 +68,7 @@ const Component: React.FC<Props> = ({ open, handleClose, handleSuccessDelete, id
             <Button disabled={disabled} color="secondary" onClick={handleClose} variant="contained">Нет</Button>
             <Button disabled={disabled} style={{marginLeft: '12px'}} onClick={handleDelete} variant="contained">Да</Button>
           </div>
+          <span className='authform-error'>{error}</span>
         </div>
       </Fade>
     </Modal>

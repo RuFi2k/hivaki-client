@@ -1,0 +1,20 @@
+.errorpage-section {
+  height: 100vh;
+  padding-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #1c1c2e;
+}
+
+.errorpage-icon {
+  font-size: 96px;
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 799px) {
+  .errorpage-icon {
+    font-size: 64px;
+  }
+}

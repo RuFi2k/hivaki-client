@@ -37,3 +37,7 @@
   font-weight: bold;
   text-align: center;
 }
+
+.snackbar-error {
+  background-color: rgb(248, 106, 106);
+}
