@@ -7,7 +7,7 @@ import './style.css'
 const Component: React.FC = () => {
   return <section className='empty-section'>
     <FontAwesomeIcon icon={faCalendarAlt} className='empty-icon' />
-    <p className="empty-text">Пока что нету доступных слотов.<br />Повторите попытку позже</p>
+    <p className="empty-text">Пока что нету доступных слотов<br />Повторите попытку позже</p>
     <Link to='/' className='empty-link'>На главную</Link>
   </section>
 }
